@@ -4,34 +4,25 @@ import { CommonModule } from '@angular/common';
 import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
 import {HttpClient, HttpClientModule} from '@angular/common/http';
 import {httpTranslateLoader} from '../app.module';
-import {MatButtonModule} from '@angular/material/button';
-import { Router } from '@angular/router';
-
 
 @Component({
-  selector: 'app-component',
-  templateUrl: './component.component.html',
-  styleUrls: ['./component.component.scss']
+  selector: 'app-cv',
+  templateUrl: './cv.component.html',
+  styleUrls: ['./cv.component.scss']
 })
-export class ComponentComponent {
-public navigate(){
-  this.router.navigate(['/', 'cv'])
-}
-constructor(private router: Router) {
-  // ...
-}
+export class CvComponent {
+
 }
 
 @NgModule({
   declarations: [
-    ComponentComponent
+    CvComponent
   ],
-  exports:[ComponentComponent],
+  exports:[CvComponent],
   imports: [   
     CommonModule,
     BrowserModule,
     HttpClientModule,
-    MatButtonModule,
     TranslateModule.forRoot({
             loader: {
                 provide: TranslateLoader,
@@ -41,5 +32,4 @@ constructor(private router: Router) {
         })
   ]
 })
-export class ComponentModule { }
-
+export class CvModule { }

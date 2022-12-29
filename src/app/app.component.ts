@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component} from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 
 @Component({
@@ -6,15 +6,25 @@ import { TranslateService } from '@ngx-translate/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent{
+  public lang!: string; 
+
+  public getLang(){
+    if(this.translate.getBrowserLang() === 'es')
+    {
+      return 'es'
+    } else return 'en'
+  }
   constructor(
     public translate: TranslateService
   ) {
     translate.addLangs(['en', 'es']);
-    translate.setDefaultLang('en');
+    translate.setDefaultLang(this.getLang());
+    this.lang = this.getLang()
   }
 
-  switchLang(lang: string) {
-    this.translate.use(lang);
+  switchLang(selectedLang: string) {
+    this.lang = selectedLang
+    this.translate.use(selectedLang);
   }
 }

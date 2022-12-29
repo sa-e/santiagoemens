@@ -4,19 +4,22 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
-import { ComponentModule } from './component/component.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HomeComponentModule } from './home/home.component';
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
-    ComponentModule,
+    HomeComponentModule,
     HttpClientModule,
+    MatButtonToggleModule,
     MatToolbarModule,
     AppRoutingModule,
     TranslateModule.forRoot({
