@@ -5,7 +5,8 @@ import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
 import {HttpClient, HttpClientModule} from '@angular/common/http';
 import {httpTranslateLoader} from '../app.module';
 import {MatButtonModule} from '@angular/material/button';
-import { Router } from '@angular/router';
+import { MatIconModule } from '@angular/material/icon';
+
 
 
 @Component({
@@ -14,12 +15,12 @@ import { Router } from '@angular/router';
   styleUrls: ['./component.component.scss']
 })
 export class ComponentComponent {
-public navigate(){
-  this.router.navigate(['/', 'cv'])
-}
-constructor(private router: Router) {
-  // ...
-}
+  goToCv() {
+    document.getElementById("cv")?.scrollIntoView({
+      behavior: "smooth",
+      block: "end",
+    });
+  }
 }
 
 @NgModule({
@@ -32,6 +33,7 @@ constructor(private router: Router) {
     BrowserModule,
     HttpClientModule,
     MatButtonModule,
+    MatIconModule,
     TranslateModule.forRoot({
             loader: {
                 provide: TranslateLoader,

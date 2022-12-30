@@ -9,6 +9,8 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponentModule } from './home/home.component';
+import { MatButtonModule } from '@angular/material/button';
+import {MatIconModule} from '@angular/material/icon';
 
 
 @NgModule({
@@ -20,6 +22,8 @@ import { HomeComponentModule } from './home/home.component';
     HomeComponentModule,
     HttpClientModule,
     MatButtonToggleModule,
+    MatButtonModule,
+    MatIconModule,
     MatToolbarModule,
     AppRoutingModule,
     TranslateModule.forRoot({

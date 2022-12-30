@@ -8,9 +8,12 @@
             <span style="color:white; font-size:18.0pt">{{'subtitle'|translate}}</span>
         </div>
         <div class="button">
-        <button mat-mini-fab color="primary" (click)="navigate()">
-            see
-          </button>
+        <div>
+        <button mat-stroked-button color="primary" (click)="goToCv()"> 
+            <span style="color: aliceblue;"> Ver CV </span>          
+            <mat-icon style="color: aliceblue;">account_circle</mat-icon>               
+        </button>
+        </div>
         </div> 
         </div>
 </div>

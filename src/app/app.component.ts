@@ -9,6 +9,23 @@ import { TranslateService } from '@ngx-translate/core';
 export class AppComponent{
   public lang!: string; 
 
+  public goToPrincipal(){
+    document.getElementById("principal")?.scrollIntoView({
+      behavior: "smooth",
+      block: "end",
+      //inline: "start"
+    });
+  }
+
+  public goToCv(){
+    document.getElementById("cv")?.scrollIntoView({
+      behavior: "smooth",
+      block: "end",
+      //inline: "start"
+    });
+  }
+
+
   public getLang(){
     if(this.translate.getBrowserLang() === 'es')
     {
