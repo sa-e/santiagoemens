@@ -12,14 +12,6 @@ import {MatIconModule} from '@angular/material/icon';
 import { HttpClient, HttpClientModule } from "@angular/common/http";
 import { TranslateHttpLoader } from "@ngx-translate/http-loader";
 
-// Loader for translation files (i.e. en.json)
-export function httpTranslateLoader(http: HttpClient) {
-    console.log("translate loader running..");
-
-    return new TranslateHttpLoader(http, "src/app/main/extensions/i18n/data/", ".json");
-}
-
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -45,9 +37,11 @@ export function httpTranslateLoader(http: HttpClient) {
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { 
+  
+}
 
-// export function httpTranslateLoader(http: HttpClient) {
-//   return new TranslateHttpLoader(http);
-// }
+export function httpTranslateLoader(http: HttpClient) {
+  return new TranslateHttpLoader(http);
+}
 
