@@ -41,5 +41,5 @@ import {MatIconModule} from '@angular/material/icon';
 export class AppModule { }
 
 export function httpLoaderFactory(http: HttpClient): TranslateHttpLoader {
-  return new TranslateHttpLoader(http, '../../dist/assets/i18n/', '.json');
+  return new TranslateHttpLoader(http, './assets/i18n/');
 }
