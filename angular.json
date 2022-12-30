@@ -28,7 +28,7 @@
             "assets": [
               "src/favicon.ico",
               "src/assets",
-              "src/app/main/extensions/i18n/data/"
+              "src/web.config"
             ],
             "styles": [
               "@angular/material/prebuilt-themes/indigo-pink.css",
