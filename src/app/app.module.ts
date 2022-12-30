@@ -3,14 +3,21 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
-import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponentModule } from './home/home.component';
 import { MatButtonModule } from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
+import { HttpClient, HttpClientModule } from "@angular/common/http";
+import { TranslateHttpLoader } from "@ngx-translate/http-loader";
+
+// Loader for translation files (i.e. en.json)
+export function httpTranslateLoader(http: HttpClient) {
+    console.log("translate loader running..");
+
+    return new TranslateHttpLoader(http, "src/app/main/extensions/i18n/data/", ".json");
+}
 
 
 @NgModule({
@@ -29,7 +36,7 @@ import {MatIconModule} from '@angular/material/icon';
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
-        useFactory: httpLoaderFactory,
+        useFactory: httpTranslateLoader,
         deps: [HttpClient]
       }
     }),
@@ -40,6 +47,7 @@ import {MatIconModule} from '@angular/material/icon';
 })
 export class AppModule { }
 
-export function httpLoaderFactory(http: HttpClient): TranslateHttpLoader {
-  return new TranslateHttpLoader(http, './assets/i18n/');
-}
+// export function httpTranslateLoader(http: HttpClient) {
+//   return new TranslateHttpLoader(http);
+// }
+
