@@ -1,4 +1,9 @@
 {
     "subtitle": "Software Engineer",
-    "educacion": "Education"
+    "vercv":"See Resume",
+    "informacion":"Personal Information",
+    "educacion": "Education",
+    "habilidades":"Skills",
+    "experiencia":"Work Experience",
+    "idiomas":"Languages"    
 }
