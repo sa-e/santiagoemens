@@ -6,7 +6,6 @@ import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HomeComponentModule } from './home/home.component';
 import { MatButtonModule } from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
 import { HttpClient, HttpClientModule } from "@angular/common/http";
@@ -18,7 +17,6 @@ import { TranslateHttpLoader } from "@ngx-translate/http-loader";
   ],
   imports: [
     BrowserModule,
-    HomeComponentModule,
     HttpClientModule,
     MatButtonToggleModule,
     MatButtonModule,

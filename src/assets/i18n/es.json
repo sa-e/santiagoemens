@@ -1,4 +1,9 @@
 {
     "subtitle": "Ingeniero de Software",
-    "educacion": "Educación"
+    "vercv":"Ver Currículum",
+    "informacion":"Información Personal",
+    "educacion": "Educación",
+    "habilidades":"Habilidades Técnicas",
+    "experiencia":"Experiencia Laboral",
+    "idiomas":"Idiomas"    
 }

@@ -18,7 +18,7 @@ export class ComponentComponent {
   goToCv() {
     document.getElementById("cv")?.scrollIntoView({
       behavior: "smooth",
-      block: "end",
+      block: "start",
     });
   }
 }

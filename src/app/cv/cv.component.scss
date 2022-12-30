@@ -1,3 +1,32 @@
 .full{
-    height: 93.2%;
+    min-height: 91%;
+    background-color: gainsboro;
+}
+
+.title{
+    margin-top: 36px;
+    margin-left: 10%;
+    width: 80%;
+    margin-bottom: 10px;    
+}
+
+.info{
+    margin-top: 4px;
+    display:flex;
+    align-items: center;
+}
+
+.card{
+    width: 600px;
+    height: 300px;
+    margin-bottom: 20px;
+}
+
+.container{
+    display: flex;
+    width: 80%;
+    height: 400;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    margin-left: 10%;
 }

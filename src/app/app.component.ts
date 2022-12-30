@@ -12,16 +12,14 @@ export class AppComponent{
   public goToPrincipal(){
     document.getElementById("principal")?.scrollIntoView({
       behavior: "smooth",
-      block: "end",
-      //inline: "start"
+      block: "end"
     });
   }
 
   public goToCv(){
     document.getElementById("cv")?.scrollIntoView({
       behavior: "smooth",
-      block: "end",
-      //inline: "start"
+      block: "start"
     });
   }
 
