@@ -29,7 +29,7 @@ import {MatIconModule} from '@angular/material/icon';
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
-        useFactory: httpTranslateLoader,
+        useFactory: httpLoaderFactory,
         deps: [HttpClient]
       }
     }),
@@ -40,6 +40,6 @@ import {MatIconModule} from '@angular/material/icon';
 })
 export class AppModule { }
 
-export function httpTranslateLoader(http: HttpClient) {
-  return new TranslateHttpLoader(http);
+export function httpLoaderFactory(http: HttpClient): TranslateHttpLoader {
+  return new TranslateHttpLoader(http, '../../dist/assets/i18n/', '.json');
 }

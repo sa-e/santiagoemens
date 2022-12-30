@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { CommonModule } from '@angular/common';
 import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
 import {HttpClient, HttpClientModule} from '@angular/common/http';
-import {httpTranslateLoader} from '../app.module';
+import {httpLoaderFactory} from '../app.module';
 import {MatButtonModule} from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 
@@ -37,7 +37,7 @@ export class ComponentComponent {
     TranslateModule.forRoot({
             loader: {
                 provide: TranslateLoader,
-                useFactory: httpTranslateLoader,
+                useFactory: httpLoaderFactory,
                 deps: [HttpClient]
             }
         })

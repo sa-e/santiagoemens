@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { CommonModule } from '@angular/common';
 import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
 import {HttpClient, HttpClientModule} from '@angular/common/http';
-import {httpTranslateLoader} from '../app.module';
+import {httpLoaderFactory} from '../app.module';
 
 @Component({
   selector: 'app-cv',
@@ -26,7 +26,7 @@ export class CvComponent {
     TranslateModule.forRoot({
             loader: {
                 provide: TranslateLoader,
-                useFactory: httpTranslateLoader,
+                useFactory: httpLoaderFactory,
                 deps: [HttpClient]
             }
         })
