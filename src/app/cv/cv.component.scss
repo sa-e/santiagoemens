@@ -19,8 +19,9 @@
 
 .card{
     width: 600px;
-    height: 300px;
+    min-height: 300px;
     margin-bottom: 20px;
+    background-color: gainsboro;
 }
 
 .container{
