@@ -9,10 +9,9 @@
     "pag1":"Generador de facturas",
     "pag2":"AAA CV",
 
-    "estudios": "Estudios",
+    "estudios": "Educación",
     "est1":"Ingeniería en sistemas de información | 2017-Act",
     "est2":"Bachiller con orientación en economía y administración | 2011-2016",
-    "est3":"Escuela Primaria | 2005-2010",
 
     "habilidades":"Habilidades Técnicas",
     
@@ -20,5 +19,5 @@
     "español":"Español",
     "ingles":"Inglés",
     "nativo":"Nativo",
-    "intermedio":"Intermedio"
+    "intermedio":"B.2"
 }
