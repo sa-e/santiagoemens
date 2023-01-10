@@ -9,10 +9,9 @@
     "pag1":"Invoice generator",
     "pag2":"AAA CV",
 
-    "estudios": "Studies",
+    "estudios": "Education",
     "est1":"Information systems engineering | 2017-Present",
     "est2":"Bachelor with orientation in economics and administration | 2011-2016",
-    "est3":"Primary school | 2005-2010",
 
     "habilidades":"Skills",    
     
@@ -20,5 +19,5 @@
     "español":"Spanish",
     "ingles":"English",
     "nativo":"Native",
-    "intermedio":"Intermediate level" 
+    "intermedio":"B.2" 
 }
